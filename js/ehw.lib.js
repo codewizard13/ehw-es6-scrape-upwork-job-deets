@@ -1,12 +1,12 @@
 /*
-Program Name:   EHW APP: Scrape LinkedIn Course Info
+Program Name:   EHW APP: Scrape Upwork Job Details
 File Name:      ehw.lib.js
-Date Created:   01/17/22
+Date Created:   01/19/22
 Date Modified:  --
 Version:        1.00
 Programmer:     Eric L. Hepperle
 
-TAGS:           Eric Hepperle, JavaScript, ES6, DOM Manipulation, App, Eric L. Hepperle
+TAGS:          JavaScript, ES6, DOM Manipulation, App, Eric L. Hepperle, Eric Hepperle
 
 Purpose: 
     This JavaScript file is a LIBRARY of helper functions.
