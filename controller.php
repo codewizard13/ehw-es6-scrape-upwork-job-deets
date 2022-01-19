@@ -1,9 +1,10 @@
 <?php // Define vars:
-$page_title = "EHW APP: Scrape LinkedIn Course Info";
-$prj_shortname = "ES6: Scrape LinkedIn Course Info";
-$purpose = "JavaScript ES6 web scraper to quickly grab all important info
-from an individual LinkedIn Learning course. This will be used to build
-a markdown notetaking framework for the course";
+$page_title = "EHW APP: Scrape Upwork Job Details";
+$prj_shortname = "ES6: Scrape Upwork Job Deets";
+$purpose = "JavaScript ES6 web scraper to quickly grab job details
+from Upwork job posts. This will be used to build
+a markdown file to document jobs applied for";
+$date_created = "01/17/22"
 
 ?>
 
@@ -11,7 +12,7 @@ a markdown notetaking framework for the course";
 Project Name:   <?php echo $page_title . "\n" ?>
 Proj Shortname: <?php echo $prj_shortname; ?> 
 Filename:       controller.php
-Date Created:   01/17/22
+Date Created:   <?php echo $date_created ?>
 Date Updated:   --
 Programmer:     Eric Hepperle
 
@@ -19,11 +20,11 @@ Purpose:
 <?php echo $purpose. "\n"; ?>
 
 Usage:
-Navigate to any video of a LinkedIn Learning course and paste the
+Navigate to any video of an Upwork job posting page and paste the
 code from App.js into the browser developer console and hit enter to run.
 
 Requires:
-* Browser navigated to a LinkedIn Learning course page
+* Browser navigated to an Upwork job posting page page
 * Web server supporting PHP 7.4
 * The project folder must live on a web server, local or remote.
 * Be logged into LinkedIn Learning
