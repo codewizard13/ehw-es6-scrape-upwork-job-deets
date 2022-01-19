@@ -54,6 +54,7 @@ Colors:
     max-width: 1024px;
     border: solid 1px #898484;
     padding: 1em;
+    border-radius: .6rem;
 }
 #ehw-top-head {
     color: white;
