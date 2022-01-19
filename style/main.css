@@ -1,0 +1,97 @@
+/*
+ File Name:    main.css
+ Short Name:   main.css
+ Purpose:      Custom Styles for EHW JavaScript ES6 Demo: Add element to DOM (prepend) Proj.
+ Author:       Eric Hepperle
+ Author URI:   http://erichepperle.com
+ Date Created: 11/29/21
+ Date Changed: --
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+
+ Tags:         Eric Hepperle, JavaScript, ES6, DOM Manipulation, Demo
+
+ Detailed Description:
+   --
+
+ Usage:
+    --
+    
+ Notes:
+    --
+
+*/
+
+/* COLORS:
+
+#ffe9ec => light pink for error background
+
+Colors:
+(From: http://www.colourlovers.com/palette/974510/Three_Druids)
+
+#73D18B - green aura
+#30CF84 - nature force (green)
+#0B998B - Fresh Sea (dark turquoise)
+#433659 - interrupted (deep purple)
+#1A101F - purpura 02 (black-purple)
+
+#000000 - black;
+#ffffff - white;
+#1e1e1e - light-gray;
+
+*/
+
+/* Any imported files must be in the same folder as (this) one.
+
+@import 'palette.less';
+@import 'mixins.less';
+@import 'elements.less';
+
+*/
+#wrapper {
+    margin: 0 auto;
+    background: #536e1d;
+    max-width: 1024px;
+    border: solid 1px #898484;
+    padding: 1em;
+}
+#ehw-top-head {
+    color: white;
+}
+#ehw-top-head h2 {
+    color: chartreuse;    
+}
+#ehw-top-head .property {
+    opacity: .5;
+}
+
+main {
+    background: #fffbe3;
+    min-height: 2em;
+    border: solid gray 2px;
+    padding: .4em 1em;
+    overflow: hidden;
+
+}
+.ehw-code pre {
+    color: green;
+    background: #f9f9f9;
+    padding: .6rem;
+    border: solid 1px;
+    border-radius: .6rem;
+}
+#ehw-content {
+    min-height: 20px;
+    background: rgb(255, 255, 179);
+    padding: 1em;
+    max-width: 1024px;
+    width: 80vw;
+    border: solid gray;
+    border-radius: 0.3rem;
+    margin: 0px auto;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 2px 1px lightgrey;    
+}
+#ehw-content h4 {
+    margin-top: 0;
+}

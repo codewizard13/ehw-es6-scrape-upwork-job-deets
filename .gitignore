@@ -1,0 +1,91 @@
+# File Name:       .gitignore_global.txt
+# Short Name:      .gitignore
+# Purpose:         Global GitIgnore
+# Author/Compiler: Eric Hepperle
+# Author URI:      http://erichepperle.com
+# Date Created:    11/28/21
+# Date Changed:    01/14/22
+# License:         GNU General Public License v2 or later
+# License URI:     http://www.gnu.org/licenses/gpl-2.0.html
+
+# Purpose: This is the master .gitignore file I created for myself.
+#   You may use this .gitignore file freely at your own risk.
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+# Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Images & Binaries #
+#####################
+#*.jpg
+#*.gif
+#*.png
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/log/*.log*
+/tmp/*
+/.vagrant
+/spec/reports
+/coverage
+/*.sublime-*
+/*~
+
+# Ignore .project file from Aptana
+/.project
+
+# MAC
+.DS_Store
+
+# HP Savings Center-Printables group
+.gemrc
+chef/
+public/assets/
+
+# Eric's ignores (11/29/21)
+.git/
+#pix/
+#_pix/
+#images/
+#_images/
+
+# TEMPORARILY:
+Readme.md
+docs/
