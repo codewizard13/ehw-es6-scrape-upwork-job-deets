@@ -99,12 +99,15 @@ Future:
 
 <?php
 // Get webpage content with cURL
-$curl = curl_init(); //$curl is going to be data type curl resource
+//$curl = curl_init(); //$curl is going to be data type curl resource
 
 $target_url = "https://www.google.com/";
 
+$result = file_get_contents($target_url);
+/*
 curl_setopt($curl, CURLOPT_URL, $target_url);
 $result = curl_exec($curl);
+*/
 
 echo "<h2>RESULT:</h2>";
 echo $result;
