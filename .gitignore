@@ -1,15 +1,17 @@
-# File Name:       .gitignore_global.txt
+# File Name:       .gitignore
 # Short Name:      .gitignore
-# Purpose:         Global GitIgnore
+# Purpose:         Tells this repo what to ignore in commits
 # Author/Compiler: Eric Hepperle
 # Author URI:      http://erichepperle.com
-# Date Created:    11/28/21
-# Date Changed:    01/14/22
+# Date Created:    01/19/22
+# Date Changed:    --
 # License:         GNU General Public License v2 or later
 # License URI:     http://www.gnu.org/licenses/gpl-2.0.html
 
-# Purpose: This is the master .gitignore file I created for myself.
-#   You may use this .gitignore file freely at your own risk.
+# Purpose: This is the .gitignore file I created for myself based largely
+#   on the global .gitignore file from my job as a Jr. Software Developer
+#   at Hewlett-Packard in Vancouver, WA in 2013. You may use this
+#   .gitignore file freely at your own risk.
 
 # Windows image file caches
 Thumbs.db
