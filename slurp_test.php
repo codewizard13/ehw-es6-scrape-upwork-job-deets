@@ -1,5 +1,5 @@
 <?php
-
+/* VARIABLES */
 $target_url = 'https://www.amazon.com';
 // $target_url = 'http://www.google.com';
 $target_url = 'https://www.linkedin.com/learning/designing-restful-apis';
@@ -8,14 +8,13 @@ $base_url = 'https://www.linkedin.com/learning';
 
 $search_str = "object oriented javascript es6";
 
+/* Sample search url:
+   https://www.linkedin.com/learning/search?keywords=object%20oriented%20javascript%20es6
+*/
 $search_url = $base_url . '/search?keywords=' . rawurlencode($search_str);
+echo '<h3>$search_url: ' . $search_url . '</h3>';
 
-//https://www.linkedin.com/learning/search?keywords=object%20oriented%20javascript%20es6
-
-
-// https://media-exp1.licdn.com/dms/image/C4E0DAQHGEmHS49qQxw/learning-public-crop_144_256/0/1591038530598?e=1642798800&v=beta&t=H0kpiE_OU64SMNgzg3nXcUOWz3fTdoQUFsST9oyIVJo
-
-/*
+/* Sample course thumb urls:
 https://media-exp1.licdn.com/dms/image/C4E0DAQF2DX4_GzNtiw/learning-public-crop_144_256/0/1567115269108?e=1642798800&v=beta&t=-Z1yy9gsSMO2fwexPwwbroo1kausegBWWVpyGZAVJOY
 https://media-exp1.licdn.com/dms/image/C4D0DAQG6dQ0gh0wiAw/learning-public-crop_144_256/0/1622221555885?e=1642798800&v=beta&t=O0V5Si-232Czwg3Xjylej-0T09p9dSqM-HoGt46FCHw
 https://media-exp1.licdn.com/dms/image/C4E0DAQHGEmHS49qQxw/learning-public-crop_144_256/0/1591038530598?e=1642798800&v=beta&t=H0kpiE_OU64SMNgzg3nXcUOWz3fTdoQUFsST9oyIVJo
@@ -27,12 +26,12 @@ https://media-exp1.licdn.com/dms/image/C4E0DAQHZ5J3EiCOgAw/learning-public-crop_
 https://media-exp1.licdn.com/dms/image/C4E0DAQG0jc7cAzGK8g/learning-public-crop_144_256/0/1567117555407?e=1642798800&v=beta&t=_tDzVfrkCEK7Fl17K5BM7YnDct_EN89p7j5kWgEFsLA
 https://media-exp1.licdn.com/dms/image/C560DAQGv2jZ7bIgGcw/learning-public-crop_144_256/0/1610728168219?e=1642798800&v=beta&t=s3D9SUqPmCr0XC3cCK7qSmPQHlzlfTQsIWC5Imf34x4
 https://media-exp1.licdn.com/dms/image/C4E0DAQFnjLm3IKbs6g/learning-public-crop_144_256/0/1573495097906?e=1642798800&v=beta&t=lIBxhpr5PGfD4GrdWQykrediv9e1X_8k0rtFUetNmm8
-
 */
 
-echo $search_url . '<br>';
+// Clear $html variable
 $html = '';
 
+// Slurp page code with cURL
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $search_url);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
@@ -45,12 +44,13 @@ preg_match_all('!https://media-exp1.licdn.com/dms/image/[^\s"]*!', $result, $mat
 
 print_r($matches);
 
-// Raw Url Decode each match
+// Callback function to rawurldecode each match
 function decode_url($u) {
     return $u . '<br>';
-    return rawurldecode($u);
+    // return rawurldecode($u);
 }
 
+// Foreach match run decode_url() on it
 $decoded_matches = array_map('decode_url', $matches);
 print_r($decoded_matches);
 
