@@ -68,10 +68,24 @@ function decode_url($u) {
 
 $images = array_values(array_unique($matches[0]));
 
+// Store image container style in a heredoc
+$img_cont_style = <<<EOT
+float: left;
+margin: 7 0 0 7;
+list-style: none;
+EOT;
+
+// Make image container style into global constant
+//  so we can access inside functions
+define('IMG_CONT_STYLE', $img_cont_style);
+
+echo $img_cont_style . '<br>';
+echo IMG_CONT_STYLE;
+
 function print_link_list($urls) {
     echo '<ul>';
     for ($i=0; $i<count($urls); $i++) {
-        echo "<li><img src='$urls[$i]'>";
+        echo "<li style='" . IMG_CONT_STYLE. "'><img src='$urls[$i]'>";
         // echo $urls[$i];
         echo '</li>';
     }
