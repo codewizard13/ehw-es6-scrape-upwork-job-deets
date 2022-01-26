@@ -1,12 +1,10 @@
 <?php
 /* VARIABLES */
-$target_url = 'https://www.amazon.com';
-// $target_url = 'http://www.google.com';
-$target_url = 'https://www.linkedin.com/learning/designing-restful-apis';
-$target_url = 'https://www.linkedin.com/learning/search?keywords=API';
 $base_url = 'https://www.linkedin.com/learning';
+$target_url = $base_url . '/search?keywords=API';
 
 $search_str = "object oriented javascript es6";
+$search_str = "object oriented php";
 
 /* Sample search url:
    https://www.linkedin.com/learning/search?keywords=object%20oriented%20javascript%20es6
@@ -14,32 +12,30 @@ $search_str = "object oriented javascript es6";
 $search_url = $base_url . '/search?keywords=' . rawurlencode($search_str);
 echo '<h3>$search_url: ' . $search_url . '</h3>';
 
-/* Sample course thumb urls:
-https://media-exp1.licdn.com/dms/image/C4E0DAQF2DX4_GzNtiw/learning-public-crop_144_256/0/1567115269108?e=1642798800&v=beta&t=-Z1yy9gsSMO2fwexPwwbroo1kausegBWWVpyGZAVJOY
-https://media-exp1.licdn.com/dms/image/C4D0DAQG6dQ0gh0wiAw/learning-public-crop_144_256/0/1622221555885?e=1642798800&v=beta&t=O0V5Si-232Czwg3Xjylej-0T09p9dSqM-HoGt46FCHw
-https://media-exp1.licdn.com/dms/image/C4E0DAQHGEmHS49qQxw/learning-public-crop_144_256/0/1591038530598?e=1642798800&v=beta&t=H0kpiE_OU64SMNgzg3nXcUOWz3fTdoQUFsST9oyIVJo
-https://media-exp1.licdn.com/dms/image/C4E0DAQEL8HR59bH8XQ/learning-public-crop_144_256/0/1567117874723?e=1642798800&v=beta&t=jU2HgEBTuw27DUNsj9e1ugRM6vSRnmCU0WFElSja_Cg
-*/
+// Slurp web page content and return html
+function get_web_content($search_url) {
+    
+    // Slurp page code with cURL
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $search_url);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-// Clear $html variable
-$html = '';
-
-// Slurp page code with cURL
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $search_url);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-$result = curl_exec($curl);
-
-// preg_match_all("!https://media-exp1.licdn.com/dms/image/[^\s]*?/learning-public-crop_144_256/0/[^\s]*?\?e=1642798800&v=beta&t=[^\s]*?!", $result, $matches);
-preg_match_all('!https://media-exp1.licdn.com/dms/image/[^\s"]*!', $result, $matches);
-
-// Callback function to rawurldecode each match
-function decode_url($u) {
-    return $u . '<br>';
-    // return rawurldecode($u);
+    return curl_exec($curl);
 }
+
+$html = get_web_content($search_url);
+
+// Define regex for image urls
+$regex_img = '!https://media-exp1.licdn.com/dms/image/[^\s"]*!';
+
+// Get and return array of image urls from web content
+function get_img_urls($html, $reg) {
+    
+}
+
+// Find and return array of all image urls
+preg_match_all($regex_img, $html, $matches);
 
 // Get unique urls only
 $images = array_values(array_unique($matches[0]));
