@@ -66,14 +66,6 @@ function print_link_list($urls) {
 }
 print_link_list($images);
 
-exit;
-// Foreach match run decode_url() on it
-$decoded_matches = array_map('decode_url', $matches);
-print_r($decoded_matches);
-
-exit;
-
-
 ?>
 
 <!DOCTYPE html>
