@@ -41,6 +41,7 @@ function decode_url($u) {
     // return rawurldecode($u);
 }
 
+// Get unique urls only
 $images = array_values(array_unique($matches[0]));
 
 // Store image container style in a heredoc
@@ -57,8 +58,8 @@ define('IMG_CONT_STYLE', $img_cont_style);
 function print_link_list($urls) {
     echo '<ul>';
     for ($i=0; $i<count($urls); $i++) {
-        echo "<li style='" . IMG_CONT_STYLE. "'><img src='$urls[$i]'>";
-        // echo $urls[$i];
+        echo "<li style='" . IMG_CONT_STYLE. "'>";
+        echo "<img src='$urls[$i]' style='width: 500'>";
         echo '</li>';
     }
     echo '</ul>';
