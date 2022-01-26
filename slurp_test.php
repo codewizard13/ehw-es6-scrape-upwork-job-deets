@@ -50,6 +50,15 @@ function decode_url($u) {
     // return rawurldecode($u);
 }
 
+function print_link_list($urls) {
+    echo '<ul>';
+    foreach ($urls as $url) {
+        var_dump($url);
+    }
+    echo '</ul>';
+}
+print_link_list($matches);
+
 // Foreach match run decode_url() on it
 $decoded_matches = array_map('decode_url', $matches);
 print_r($decoded_matches);
