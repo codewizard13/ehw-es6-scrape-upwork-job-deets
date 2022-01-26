@@ -82,6 +82,7 @@ $html = print_link_list($images);
     background: beige;
     border: solid 2px red;
     margin: 2rem auto;
+    max-width: 1024px;
     width: 60%;
     overflow: hidden;
 }
