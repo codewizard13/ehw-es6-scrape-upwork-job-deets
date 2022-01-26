@@ -70,7 +70,9 @@ function decode_url($u) {
 function print_link_list($urls) {
     echo '<ul>';
     for ($i=0; $i<count($urls); $i++) {
-        echo '<li>'. $urls[$i] . '</li>';
+        echo "<li><img src='$urls[$i]'>";
+        // echo $urls[$i];
+        echo '</li>';
     }
     echo '</ul>';
 }
