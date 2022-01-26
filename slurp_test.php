@@ -42,7 +42,23 @@ $result = curl_exec($curl);
 // preg_match_all("!https://media-exp1.licdn.com/dms/image/[^\s]*?/learning-public-crop_144_256/0/[^\s]*?\?e=1642798800&v=beta&t=[^\s]*?!", $result, $matches);
 preg_match_all('!https://media-exp1.licdn.com/dms/image/[^\s"]*!', $result, $matches);
 
-print_r($matches);
+// echo 'There type of $matches is ' . gettype($matches) . '<br>';
+// echo 'There are ' . count($matches) . ' matches!<br>';
+
+// echo 'There are ' . count($matches[0]) . ' matches[0]!<br>';
+// echo 'There type of $matches[0] is ' . gettype($matches[0]) . '<br>';
+// print_r($matches[0]);
+// echo '<hr>';
+
+// echo $matches[0][0] . '<br>';
+
+// echo 'There are ' . count($matches[0][0]) . ' matches[0][0]!<br>';
+// echo 'There type of $matches[0][0] is ' . gettype($matches[0][0]) . '<br>';
+// print_r($matches[0][0]);
+// echo '<hr>';
+
+// print_r($matches);
+// exit;
 
 // Callback function to rawurldecode each match
 function decode_url($u) {
@@ -50,15 +66,17 @@ function decode_url($u) {
     // return rawurldecode($u);
 }
 
+
 function print_link_list($urls) {
     echo '<ul>';
-    foreach ($urls as $url) {
-        var_dump($url);
+    for ($i=0; $i<count($urls); $i++) {
+        echo '<li>'. $urls[$i] . '</li>';
     }
     echo '</ul>';
 }
-print_link_list($matches);
+print_link_list($matches[0]);
 
+exit;
 // Foreach match run decode_url() on it
 $decoded_matches = array_map('decode_url', $matches);
 print_r($decoded_matches);
