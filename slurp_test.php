@@ -66,6 +66,7 @@ function decode_url($u) {
     // return rawurldecode($u);
 }
 
+$images = array_unique($matches[0]);
 
 function print_link_list($urls) {
     echo '<ul>';
@@ -76,7 +77,7 @@ function print_link_list($urls) {
     }
     echo '</ul>';
 }
-print_link_list($matches[0]);
+print_link_list($images);
 
 exit;
 // Foreach match run decode_url() on it
