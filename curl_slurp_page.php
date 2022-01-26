@@ -31,14 +31,15 @@ $regex_img = '!https://media-exp1.licdn.com/dms/image/[^\s"]*!';
 
 // Get and return array of image urls from web content
 function get_img_urls($html, $reg) {
-    
+    // Find and return array of all image urls
+    preg_match_all($reg, $html, $matches);
+
+    // Get unique urls only
+    $images = array_values(array_unique($matches[0]));
+    return $images;
 }
 
-// Find and return array of all image urls
-preg_match_all($regex_img, $html, $matches);
-
-// Get unique urls only
-$images = array_values(array_unique($matches[0]));
+$img_urls = get_img_urls($html, $regex_img);
 
 // Store image container style in a heredoc
 $img_cont_style = <<<EOT
@@ -64,7 +65,7 @@ function print_link_list($urls) {
     $out .= '</ul>';
     return $out;
 }
-$html = print_link_list($images);
+$html = print_link_list($img_urls);
 
 ?>
 
