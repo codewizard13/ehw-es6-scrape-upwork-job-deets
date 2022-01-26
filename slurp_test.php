@@ -66,7 +66,7 @@ function decode_url($u) {
     // return rawurldecode($u);
 }
 
-$images = array_unique($matches[0]);
+$images = array_values(array_unique($matches[0]));
 
 function print_link_list($urls) {
     echo '<ul>';
