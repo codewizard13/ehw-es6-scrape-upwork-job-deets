@@ -56,15 +56,17 @@ EOT;
 define('IMG_CONT_STYLE', $img_cont_style);
 
 function print_link_list($urls) {
-    echo '<ul>';
+    $out = ''; // initialize output buffer
+    $out .= '<ul>';
     for ($i=0; $i<count($urls); $i++) {
-        echo "<li style='" . IMG_CONT_STYLE. "'>";
-        echo "<img src='$urls[$i]' style='width: 500'>";
-        echo '</li>';
+        $out .= "<li style='" . IMG_CONT_STYLE. "'>";
+        $out .= "<img src='$urls[$i]' style='width: 500'>";
+        $out .= '</li>';
     }
-    echo '</ul>';
+    $out .= '</ul>';
+    return $out;
 }
-print_link_list($images);
+$html = print_link_list($images);
 
 ?>
 
