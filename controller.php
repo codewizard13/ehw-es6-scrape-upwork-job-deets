@@ -5,19 +5,24 @@ $purpose = "JavaScript ES6 web scraper to quickly grab job details
 from Upwork job posts. This will be used to build
 a markdown file to document jobs applied for.";
 $date_created = "01/19/22"
-
 ?>
 
 <!--
-Project Name:   <?php echo $page_title . "\n" ?>
-Proj Shortname: <?php echo $prj_shortname; ?> 
-Filename:       controller.php
-Date Created:   <?php echo $date_created ?>
-Date Updated:   --
-Programmer:     Eric Hepperle
+Project Name:   EHW APP: Scrape Upwork Job Details
+Proj Shortname: ES6: Scrape Upwork Job Deets 
+Main Prj File:  controller.php
+This Filename:  ehw.prj.info.js
+Date Created:   01/19/22
+Date Updated:   01/28/22
+Programmer:     Eric L. Hepperle
 
-Purpose: 
-<?php echo $purpose. "\n"; ?>
+Prj Purpose: 
+JavaScript ES6 web scraper to quickly grab job details
+from Upwork job posts. This will be used to build
+a markdown file to document jobs applied for.
+
+File Purpose:
+PHP Controller file for project.
 
 Usage:
 Navigate to any video of an Upwork job posting page and paste the
