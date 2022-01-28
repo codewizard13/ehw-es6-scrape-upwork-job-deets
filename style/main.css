@@ -1,32 +1,26 @@
 /*
- File Name:    main.css
- Short Name:   main.css
- Purpose:      Custom Styles for EHW APP: Scrape Upwork Job Details Proj.
- Author:       Eric Hepperle
- Author URI:   http://erichepperle.com
- Date Created: 11/29/21
- Date Changed: 01/19/22
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Project Name:   EHW APP: Scrape Upwork Job Details
+Main Prj File:  controller.php
 
- Tags:         Eric Hepperle, JavaScript, ES6, DOM Manipulation, App
+This Filename:  main.css
+Date Created:   11/29/22
+Date Updated:   01/28/22
+Programmer:     Eric L. Hepperle
 
- Detailed Description:
-   --
+File Version:    1.00.00
 
- Usage:
-    --
-    
- Notes:
-    --
+File Purpose: 
+  Custom Styles for EHW APP: Scrape Upwork Job Details Proj.
+ 
 
+Tags:         Eric Hepperle, JavaScript, ES6, DOM Manipulation, App
 */
 
 /* COLORS:
-
+----------------------------
 #ffe9ec => light pink for error background
 
-Colors:
+Demo Palette:
 (From: http://www.colourlovers.com/palette/974510/Three_Druids)
 
 #73D18B - green aura
@@ -38,16 +32,16 @@ Colors:
 #000000 - black;
 #ffffff - white;
 #1e1e1e - light-gray;
-
 */
 
-/* Any imported files must be in the same folder as (this) one.
-
+/* IMPORTS
+----------------------------
+(Any imported files must be in the same folder as (this) one.)
 @import 'palette.less';
 @import 'mixins.less';
 @import 'elements.less';
-
 */
+
 #wrapper {
     margin: 0 auto;
     background: #536e1d;

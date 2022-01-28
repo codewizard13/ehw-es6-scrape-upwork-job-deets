@@ -1,34 +1,36 @@
 /*
-Program Name:   EHW APP: Scrape Upwork Job Details
-File Name:      ehw.lib.js
+Project Name:   EHW APP: Scrape Upwork Job Details
+Main Prj File:  controller.php
+
+This Filename:  ehw.lib.js
 Date Created:   01/19/22
-Date Modified:  --
-Version:        1.00
+Date Updated:   01/28/22
 Programmer:     Eric L. Hepperle
 
-TAGS:          JavaScript, ES6, DOM Manipulation, App, Eric L. Hepperle, Eric Hepperle
+File Version:    1.00.00
 
-Purpose: 
-    This JavaScript file is a LIBRARY of helper functions.
-    
+File Purpose:
+  This JavaScript file is a LIBRARY of helper functions.
+
+TAGS:   JavaScript, ES6, DOM Manipulation, App, Eric L. Hepperle, Eric Hepperle
+
 Usage:
-    Use with controller.php
+  Use with controller.php
 
 Sample results: 
-
 --
 
 Requires:
-	* controller.php
-    * Browser
+  * controller.php
+  * Browser
     
 Demonstrates:
-    * Vanilla JavaScript
-    * JavaScript ES6/ECMAScript2015
-    * 
+  * Vanilla JavaScript
+  * JavaScript ES6/ECMAScript2015
+  * 
 
 Future:
-    * Use fetch API or CURL to grab webpage content with controller.php
+  * Use fetch API or CURL to grab webpage content with controller.php
 */
 
 var data = {

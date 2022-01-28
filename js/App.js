@@ -1,33 +1,35 @@
 /*
-Program Name:   EHW APP: Scrape Upwork Job Details
-File Name:      App.js
+Project Name:   EHW APP: Scrape Upwork Job Details
+Main Prj File:  controller.php
+
+This Filename:  App.js
 Date Created:   01/19/22
-Date Modified:  --
-Version:        1.00
+Date Updated:   01/28/22
 Programmer:     Eric L. Hepperle
 
-TAGS:           Eric Hepperle, JavaScript, ES6, DOM Manipulation, App, Eric L. Hepperle
+File Version:    1.00.00
 
-Purpose: 
-    This JavaScript file contains the main "business logic" and primary
-    mechanics of the current project. This project scrapes job details
-    from Upwork job posts.
-    
+File Purpose:
+  This JavaScript file contains the main "business logic" and primary
+  mechanics of the current project. This project scrapes job details
+  from Upwork job posts.
+
+TAGS:   Eric Hepperle, JavaScript, ES6, DOM Manipulation, App, Eric L. Hepperle
+
 Usage:
-    Navigate to any Upwork job post page and paste this code into the
-    browser developer console and hit enter to run.
+  Navigate to any Upwork job post page and paste this code into the
+  browser developer console and hit enter to run.
 
 Sample results: 
-
 --
 
 Requires:
-	* controller.php
-    * Browser
+  * controller.php
+  * Browser
     
 Demonstrates:
-    * Vanilla JavaScript
-    * JavaScript ES6/ECMAScript2015
+  * Vanilla JavaScript
+  * JavaScript ES6/ECMAScript2015
 
 */
 

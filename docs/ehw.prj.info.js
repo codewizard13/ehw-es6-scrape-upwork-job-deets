@@ -6,10 +6,15 @@ This is the main details page for the project
 Project Name:   EHW APP: Scrape Upwork Job Details
 Proj Shortname: ES6: Scrape Upwork Job Deets 
 Main Prj File:  controller.php
+
 This Filename:  ehw.prj.info.js
 Date Created:   01/28/22
 Date Updated:   --
 Programmer:     Eric L. Hepperle
+
+Author URI:   http://erichepperle.com
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
 Proj Version:    1.00.00
 File Version:    1.00.00
