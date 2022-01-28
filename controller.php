@@ -1,20 +1,13 @@
-<?php // Define vars:
-$page_title = "EHW APP: Scrape Upwork Job Details";
-$prj_shortname = "ES6: Scrape Upwork Job Deets";
-$purpose = "JavaScript ES6 web scraper to quickly grab job details
-from Upwork job posts. This will be used to build
-a markdown file to document jobs applied for.";
-$date_created = "01/19/22"
-?>
-
 <!--
 Project Name:   EHW APP: Scrape Upwork Job Details
-Proj Shortname: ES6: Scrape Upwork Job Deets 
 Main Prj File:  controller.php
-This Filename:  ehw.prj.info.js
+
+This Filename:  controller.php
 Date Created:   01/19/22
 Date Updated:   01/28/22
 Programmer:     Eric L. Hepperle
+
+File Version:    1.00.00
 
 Prj Purpose: 
 JavaScript ES6 web scraper to quickly grab job details
@@ -50,6 +43,15 @@ Future:
 * Use curl or fetch API to grab course page and parse info from there
 
 -->
+
+<?php // Define vars:
+$page_title = "EHW APP: Scrape Upwork Job Details";
+$prj_shortname = "ES6: Scrape Upwork Job Deets";
+$purpose = "JavaScript ES6 web scraper to quickly grab job details
+from Upwork job posts. This will be used to build
+a markdown file to document jobs applied for.";
+$date_created = "01/19/22"
+?>
 
 <!DOCTYPE html>
 <html lang="en">
