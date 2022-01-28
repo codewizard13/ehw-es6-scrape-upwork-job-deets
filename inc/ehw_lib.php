@@ -1,4 +1,16 @@
 <?php // ehw_lib.php
+/*
+Project Name:   EHW APP: Scrape Upwork Job Details
+Main Prj File:  controller.php
+This Filename:  ehw.lib.php
+Date Created:   01/26/22
+Date Updated:   01/28/22
+Programmer:     Eric L. Hepperle
+
+File Purpose:
+Library of my portable functions that can be used in
+any PHP project. Similar to WordPress functions.php.
+*/
 
 /**
  * Slurp web page content with cURL and return html
