@@ -11,6 +11,9 @@ Date Created:   01/28/22
 Date Updated:   --
 Programmer:     Eric L. Hepperle
 
+Proj Version:    1.00.00
+File Version:    1.00.00
+
 Prj Purpose: 
 JavaScript ES6 web scraper to quickly grab job details
 from Upwork job posts. This will be used to build
